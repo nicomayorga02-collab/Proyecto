@@ -1,0 +1,206 @@
+/* --- ESTILOS GENERALES Y TEMA SNOOPY --- */
+:root {
+    --red-snoopy: #e63946;
+    --yellow-woodstock: #ffb703;
+    --white-doghouse: #ffffff;
+    --black-comic: #1d3557;
+    --soft-pink: #ffe5ec;
+    --sky-blue: #a8dede;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--soft-pink);
+    font-family: 'Patrick Hand', cursive;
+    color: #333;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Lluvia de corazones flotantes */
+.heart-particle {
+    position: fixed;
+    top: -10px;
+    font-size: 20px;
+    color: var(--red-snoopy);
+    user-select: none;
+    pointer-events: none;
+    z-index: 100;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(105vh) rotate(360deg);
+    }
+}
+
+/* Envoltorio principal */
+.container {
+    max-width: 750px;
+    width: 100%;
+    background: var(--white-doghouse);
+    border: 4px solid var(--black-comic);
+    border-radius: 25px;
+    box-shadow: 8px 8px 0px var(--black-comic);
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+/* Banner de Encabezado */
+.header-title {
+    font-family: 'Fredoka One', cursive;
+    color: var(--red-snoopy);
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 0px var(--yellow-woodstock);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Ilustración / Decoración Snoopy */
+.snoopy-box {
+    background: #fff;
+    border: 3px dashed var(--red-snoopy);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fffdf9;
+}
+
+.snoopy-quote {
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem;
+    color: var(--red-snoopy);
+    font-weight: bold;
+}
+
+/* Secciones de amor extenso */
+.love-section {
+    background: #fdfaf6;
+    border: 2px solid #e0e0e0;
+    border-left: 6px solid var(--red-snoopy);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px 0;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.love-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.05);
+}
+
+.love-section h3 {
+    font-family: 'Fredoka One', cursive;
+    color: var(--black-comic);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.love-section p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Botón Interactivo de Notas / Cartas */
+.interactive-area {
+    margin: 30px 0;
+    padding: 20px;
+    background: var(--sky-blue);
+    border-radius: 15px;
+    border: 3px solid var(--black-comic);
+}
+
+.btn-love {
+    background-color: var(--red-snoopy);
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border: 3px solid var(--black-comic);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px var(--black-comic);
+    transition: all 0.2s ease;
+}
+
+.btn-love:hover {
+    background-color: #d62828;
+    transform: scale(1.05);
+}
+
+.btn-love:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--black-comic);
+}
+
+#dynamic-note {
+    margin-top: 20px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem;
+    color: var(--black-comic);
+    min-height: 60px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--black-comic);
+}
+
+/* Contador de Razones para Amarla */
+.counter-box {
+    background: var(--yellow-woodstock);
+    border: 3px solid var(--black-comic);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Sección Final y Firma */
+.final-declaration {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 3px dashed var(--red-snoopy);
+}
+
+.signature {
+    font-family: 'Caveat', cursive;
+    font-size: 2.8rem;
+    color: var(--red-snoopy);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.woodstock-icon {
+    display: inline-block;
+    animation: bounce 1.5s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
